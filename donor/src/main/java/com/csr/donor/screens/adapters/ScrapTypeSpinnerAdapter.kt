@@ -64,7 +64,7 @@ class ScrapTypeSpinnerAdapter(private val appContext: Context) : BaseAdapter() {
         val img: ImageView
 
         init {
-            label = row.findViewById(R.id.text) as TextView
+            label = row.findViewById(R.id.tv_scrap_type) as TextView
             img = row.findViewById(R.id.iv_scrap) as ImageView
         }
     }

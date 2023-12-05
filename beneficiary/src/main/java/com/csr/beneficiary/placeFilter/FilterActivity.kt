@@ -26,7 +26,6 @@ class FilterActivity : AppCompatActivity() {
         setContentView(binding.root)
         viewModel.fetchScrapTypes()
         binding.apply {
-            swipeRefreshLayout.isEnabled = false
             rvScrapeTypes.apply {
 
             }
@@ -47,7 +46,7 @@ class FilterActivity : AppCompatActivity() {
             btnSaveChanges.setOnClickListener {
                 viewModel.applyFilters()
                 lifecycleScope.launch {
-                    MyApplication.onFilterChanged.emit(Unit)
+//                    MyApplication.onFilterChanged.emit(Unit)
                 }
                 finish()
             }

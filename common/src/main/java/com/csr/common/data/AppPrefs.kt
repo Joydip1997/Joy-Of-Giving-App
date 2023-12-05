@@ -3,6 +3,8 @@ package com.csr.common.data
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
+import com.google.common.reflect.TypeToken
+import com.google.gson.Gson
 
 class AppPrefs(context: Context) {
     fun clear() {
@@ -37,33 +39,7 @@ class AppPrefs(context: Context) {
         }
 
 
-    var isPremium: Boolean
-        get() = prefs.getBoolean(IS_PREMIUM, false)
-        set(value) {
-            editor.putBoolean(IS_PREMIUM, value)
-            editor.apply()
-        }
 
-    var purchaseToken: String?
-        get() = prefs.getString(CURRENT_PURCHASE_TOKEN, null)
-        set(value) {
-            editor.putString(CURRENT_PURCHASE_TOKEN, value)
-            editor.apply()
-        }
-
-    var hasUserStoppedBackgroundMusic: Boolean
-        get() = prefs.getBoolean(BACKGROUND_MUSIC_STOPPED, true)
-        set(value) {
-            editor.putBoolean(BACKGROUND_MUSIC_STOPPED, value)
-            editor.apply()
-        }
-
-    var backgroundMusicVolume: Float
-        get() = prefs.getFloat(BACKGROUND_MUSIC_VOLUME, 0.5f)
-        set(value) {
-            editor.putFloat(BACKGROUND_MUSIC_VOLUME, value)
-            editor.apply()
-        }
 
     var isOnboardingAlreadyDonne: Boolean get() = prefs.getBoolean(IS_USER_ONBOARDING_IN_ALREADY_DONE, false)
         set(value) {
@@ -71,17 +47,26 @@ class AppPrefs(context: Context) {
             editor.apply()
         }
 
-
-    var isUserReviewedTheAppAllReady: Boolean get() = prefs.getBoolean(IS_USER_ALL_READY_REVIEWED_APP, false)
+    var distance: Int
+        get() = prefs.getInt(DISTANCE, 5) * 1000
         set(value) {
-            editor.putBoolean(IS_USER_ALL_READY_REVIEWED_APP, value)
+            editor.putInt(DISTANCE, value)
             editor.apply()
         }
 
-
-    var sessionCount: Int get() = prefs.getInt(SESSION_COUNT, 0)
+    var scrapTypes: List<String>
+        get() {
+            val json = prefs.getString(SCRAP_TYPES, null)
+            return if (json != null) {
+                val type = object : TypeToken<List<String>>() {}.type
+                Gson().fromJson(json, type)
+            } else {
+                emptyList()
+            }
+        }
         set(value) {
-            editor.putInt(SESSION_COUNT, value)
+            val json = Gson().toJson(value)
+            editor.putString(SCRAP_TYPES, json)
             editor.apply()
         }
 
@@ -93,11 +78,9 @@ class AppPrefs(context: Context) {
         const val CURRENT_PURCHASE_TOKEN = "CURRENT_PURCHASE_TOKEN"
         const val BACKGROUND_MUSIC_STOPPED = "BACKGROUND_MUSIC_STOPPED"
         const val IS_USER_ONBOARDING_IN_ALREADY_DONE = "IS_USER_ONBOARDING_IN_ALREADY_DONE"
-        const val SOUND_TIMER_VALUE = "SOUND_TIMER_VALUE"
+        const val DISTANCE = "DISTANCE"
         const val MOBILE_NUMBER = "MOBILE_NUMBER"
-        const val BACKGROUND_MUSIC_VOLUME = "BACKGROUND_MUSIC_VOLUME"
-        const val IS_USER_ALL_READY_REVIEWED_APP = "IS_USER_ALL_READY_REVIEWED_APP"
-        const val SESSION_COUNT = "SESSION_COUNT"
+        private const val SCRAP_TYPES = "SCRAP_TYPES"
     }
 
     init {

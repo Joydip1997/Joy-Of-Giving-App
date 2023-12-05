@@ -43,7 +43,6 @@ class ViewModelHomeFragment @Inject constructor(
     fun fetchNearByPickupOrders() {
         viewModelScope.launch {
             val currentLocation = locationClient.getCurrentLocation()
-            Log.i("JAPAN", "fetchNearByPickupOrders: ${appPrefs.scrapTypes}")
             currentLocation?.let { latLng ->
                 val nearByOrders =
                     pickupOrderRepository.getNearByOrders(latLng.latitude, latLng.longitude, appPrefs.distance,appPrefs.scrapTypes)

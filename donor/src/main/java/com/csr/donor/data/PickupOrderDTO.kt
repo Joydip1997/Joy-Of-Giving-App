@@ -16,8 +16,8 @@ data class PickupOrderDTO(
     @SerializedName("buyerDetails")
     val buyer : User?= null,
     val pickupLocation: UserAddressDTO? = null,
-    var scrapTypes : List<String> ?= null,
-    var scrapImages : List<String> ?= null,
+    var itemTypes : List<String> ?= null,
+    var itemImages : List<String> ?= null,
     val orderStatus: Int = 0
 )
 @Keep

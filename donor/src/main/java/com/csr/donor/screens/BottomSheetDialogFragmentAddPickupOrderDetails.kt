@@ -22,7 +22,6 @@ import androidx.work.WorkManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
-import com.csr.app.MyApplication
 import com.csr.donor.data.scrapModel.ScrapItemCost
 import com.csr.donor.databinding.BottomsheetPickupOrderMoreDetailsBinding
 import com.csr.donor.screens.adapters.AdapterScrapImages
@@ -93,7 +92,7 @@ class BottomSheetDialogFragmentAddPickupOrderDetails : BottomSheetDialogFragment
                     binding.etScrapWegiht.requestFocus()
                     return@setOnClickListener
                 }
-                com.csr.app.MyApplication.pickupOrderDTO?.orderEstimatedWeight = binding.etScrapWegiht.text.safeInt()
+//                MyApplication.pickupOrderDTO?.orderEstimatedWeight = binding.etScrapWegiht.text.safeInt()
                 viewModel.schedulePickup()
             }
         }

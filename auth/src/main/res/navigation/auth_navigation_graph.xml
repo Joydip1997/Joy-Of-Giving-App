@@ -13,7 +13,7 @@
         android:label="OnBoardingFragment" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.csr.beneficiary.auth.LoginFragment"
+        android:name="com.csr.auth.auth.LoginFragment"
         tools:layout="@layout/fragment_login"
         android:label="LoginFragment" />
     <fragment
@@ -23,7 +23,7 @@
         android:label="VerifyOtpFragment" />
     <fragment
         android:id="@+id/createProfileFragment"
-        android:name="com.csr.beneficiary.auth.CreateProfileFragment"
+        android:name="com.csr.auth.auth.CreateProfileFragment"
         tools:layout="@layout/fragment_create_profile"
         android:label="CreateProfileFragment" />
 </navigation>

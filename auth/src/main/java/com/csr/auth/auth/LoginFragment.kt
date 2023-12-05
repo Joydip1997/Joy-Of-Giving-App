@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthOptions
 import com.google.firebase.auth.PhoneAuthProvider
-import com.csr.common.R
+import com.csr.auth.R
 import com.csr.auth.databinding.FragmentLoginBinding
 import com.csr.auth.auth.viewModels.ViewModelAuth
 import com.csr.common.base.BaseFragment

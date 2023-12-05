@@ -14,7 +14,7 @@ import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.ForegroundInfo
 import androidx.work.WorkerParameters
-import com.csr.app.MyApplication
+import com.csr.donor.Module.pickupOrderDTO
 import com.csr.donor.R
 import com.csr.donor.activity.MainActivity
 import com.csr.donor.data.Order.PickupOrderRepository
@@ -40,11 +40,11 @@ class AddPickupOrderWorker @AssistedInject constructor(
         return try {
             // Retrieve the list of byte arrays from input data
             val uploadedImageUrls = inputData.getStringArray("IMAGE_FILES")
-            val reviewRequestDTO = com.csr.app.MyApplication.pickupOrderDTO ?: return Result.failure()
+            val pickupOrderDTO = pickupOrderDTO ?: return Result.failure()
             setForeground(getForegroundInfo(applicationContext))
-            reviewRequestDTO.scrapImages = uploadedImageUrls?.toList()
+            pickupOrderDTO.itemImages = uploadedImageUrls?.toList()
 
-            val isReviewAdded = pickupOrderRepository.placeNewOrder(reviewRequestDTO)
+            val isReviewAdded = pickupOrderRepository.placeNewOrder(pickupOrderDTO)
             if (isReviewAdded != null) {
                 sendPushNotificationOnSuccessFullPlaceAdd()
             }else{

@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.csr.app.MyApplication
 import com.csr.donor.data.Order.PickupOrderRepository
 import com.csr.donor.data.PickupLocation
 import com.csr.donor.data.PickupOrderDTO
@@ -188,7 +187,7 @@ class ViewModelSchedulePickupFragment @Inject constructor(
                 pickupLocation = pickupAddress?.toDTO(),
                 orderStatus = PickupOrderStatus.SCHEDULED.ordinal
             )
-            com.csr.app.MyApplication.pickupOrderDTO = pickupOrderDTO
+//            com.csr.app.MyApplication.pickupOrderDTO = pickupOrderDTO
             _onOrderPlaced.emit(pickupOrderDTO)
         }
     }

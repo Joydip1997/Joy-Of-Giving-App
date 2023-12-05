@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.csr.app.MyApplication
 import com.csr.donor.R
 import com.csr.donor.data.location_repository.LocationRepository
 import com.csr.donor.data.scrapModel.ItemQuantityType
@@ -317,7 +316,7 @@ class ViewModelAddPickupOrderDetailsFragment @Inject constructor(
     fun schedulePickup() {
         viewModelScope.launch {
             val selectedScrapTypes = selectedScrapType.map { it.name }
-            com.csr.app.MyApplication.pickupOrderDTO?.scrapTypes = selectedScrapTypes.ifEmpty { listOf("All") }
+//            com.csr.app.MyApplication.pickupOrderDTO?.scrapTypes = selectedScrapTypes.ifEmpty { listOf("All") }
             _onOrderPlaced.emit(imageFileArrayList.map { it.toString() }.toTypedArray())
         }
     }
