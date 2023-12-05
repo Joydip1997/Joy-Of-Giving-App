@@ -1,4 +1,4 @@
-package com.csr.beneficiary.activity
+package com.csr.auth.auth.activity
 
 
 import android.app.AlertDialog
@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import com.csr.beneficiary.R
+import com.csr.auth.R
+import com.csr.auth.databinding.ActivityAuthBinding
 import com.csr.common.data.AppPrefs
-import com.csr.beneficiary.databinding.ActivityAuthBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

@@ -9,8 +9,6 @@ import com.google.android.play.core.review.ReviewException
 import com.google.android.play.core.review.ReviewManagerFactory
 import com.google.android.play.core.review.model.ReviewErrorCode
 import com.csr.donor.BuildConfig
-import com.csr.donor.activity.AuthActivity
-import com.csr.donor.activity.WebViewActivity
 import com.csr.donor.base.BaseFragment
 import com.csr.donor.databinding.FragmentProfileBinding
 import com.csr.donor.screens.viewModels.ViewModelProfileFragment
@@ -35,15 +33,14 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding>(FragmentProfileBind
 
             }
             onLogout.collectIn(viewLifecycleOwner) {
-                requireActivity().startActivity(Intent(requireActivity(), AuthActivity::class.java))
                 requireActivity().finish()
             }
         }
         binding.apply {
             llProfileAppInfo.apply {
                 llReviewApp.setOnClickListener { startReviewFlow() }
-                llPrivacyPolicy.setOnClickListener { WebViewActivity.goToWebViewActivity(requireContext(),"${BuildConfig.WEBPAGE_URL}privacy-policy") }
-                llTermsAndConditions.setOnClickListener { WebViewActivity.goToWebViewActivity(requireContext(),"${BuildConfig.WEBPAGE_URL}terms-and-conditions")  }
+                llPrivacyPolicy.setOnClickListener {  }
+                llTermsAndConditions.setOnClickListener {   }
                // llHelpAndSupport.setOnClickListener { (requireActivity() as MainActivity).fetchBillingForHelp()  }
             }
             btnLogOut.setOnClickListener {

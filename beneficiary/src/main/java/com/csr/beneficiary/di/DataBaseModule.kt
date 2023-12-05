@@ -22,8 +22,6 @@ class DataBaseModule {
         MyAppDataBase::class.java, "database-name"
     ).fallbackToDestructiveMigration().build()
 
-    @Provides
-    @Singleton
-    fun provideUserPreference(@ApplicationContext context: Context) : AppPrefs = AppPrefs(context = context)
+
 
 }
