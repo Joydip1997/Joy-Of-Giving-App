@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "348771775520",
+    "project_id": "recycler-dada",
+    "storage_bucket": "recycler-dada.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348771775520:android:f47914742fc3462fabf845",
+        "android_client_info": {
+          "package_name": "com.csr.common"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC16u6fSJuwu6uuKVmgGJAAEgcq5PbYMlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348771775520:android:1128e7eb277c6f2eabf845",
+        "android_client_info": {
+          "package_name": "com.csr.common"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC16u6fSJuwu6uuKVmgGJAAEgcq5PbYMlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

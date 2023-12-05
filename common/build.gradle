@@ -1,0 +1,181 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'kotlin-parcelize'
+    id 'com.google.dagger.hilt.android'
+}
+
+android {
+    namespace 'com.csr.common'
+    compileSdk 34
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+//        release {
+//            minifyEnabled true
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+//            buildConfigField("String", "BASE_URL", "\"${BASE_URL}\"")
+//            buildConfigField("String", "WEBPAGE_URL", "\"${WEBPAGE_URL}\"")
+//            buildConfigField("String", "API_KEY", "\"${API_KEY}\"")
+//        }
+        debug {
+            manifestPlaceholders.cleartextTrafficPermitted = "true"
+            buildConfigField("String", "BASE_URL", "\"${BASE_URL}\"")
+            buildConfigField("String", "WEBPAGE_URL", "\"${WEBPAGE_URL}\"")
+            buildConfigField("String", "API_KEY", "\"${API_KEY}\"")
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.google.code.gson:gson:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+
+//    implementation 'com.google.android.gms:play-services-ads:21.5.0'
+
+    api 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+
+
+    api 'com.google.firebase:firebase-auth'
+    api platform('com.google.firebase:firebase-bom:31.1.1')
+    api 'com.google.firebase:firebase-analytics'
+    api 'com.google.firebase:firebase-crashlytics'
+    api 'com.google.firebase:firebase-messaging:23.1.2'
+    api 'com.google.firebase:firebase-storage:20.1.0'
+    api("com.google.firebase:firebase-firestore")
+
+
+    // Also declare the dependency for the Google Play services library and specify its version
+    api 'com.google.android.gms:play-services-auth:20.4.1'
+
+
+
+
+
+    api 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+
+
+
+
+
+
+    api 'com.google.firebase:firebase-config:21.4.0'
+    api 'org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.0'
+
+
+    api 'androidx.navigation:navigation-fragment-ktx:2.7.1'
+    api 'androidx.navigation:navigation-ui-ktx:2.7.1'
+
+    api "androidx.viewpager2:viewpager2:1.0.0"
+
+
+    //SSP-SSDP
+    api 'com.intuit.ssp:ssp-android:1.1.0'
+    api 'com.intuit.sdp:sdp-android:1.1.0'
+
+
+    //Firebase
+    api 'com.google.firebase:firebase-auth-ktx:21.1.0'
+    api 'com.google.android.gms:play-services-auth:20.4.1'
+
+    def room_version = "2.5.2"
+
+    api "androidx.room:room-runtime:$room_version"
+    api "androidx.room:room-ktx:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    api("androidx.hilt:hilt-work:1.0.0")
+    // To use Kotlin annotation processing tool (kapt)
+    kapt "androidx.room:room-compiler:$room_version"
+
+
+
+    // Hilt
+    api "com.google.dagger:hilt-android:2.44"
+    kapt "com.google.dagger:hilt-compiler:2.44"
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
+
+    //Coroutines
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
+
+
+
+
+
+
+    api 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    api 'androidx.lifecycle:lifecycle-service:2.6.1'
+
+
+
+
+    // For Kotlin users also import the Kotlin extensions library for Play In-App Update:
+    api("com.google.android.play:app-update-ktx:2.1.0")
+
+
+
+
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1"
+
+
+    api("com.google.android.play:review:2.0.1")
+    api("com.google.android.play:review-ktx:2.0.1")
+
+    api(platform("com.google.firebase:firebase-bom:32.2.0"))
+    api("com.google.firebase:firebase-perf-ktx")
+
+
+
+    api 'com.google.android.gms:play-services-maps:18.2.0'
+    api 'com.google.android.gms:play-services-location:21.0.1'
+
+
+
+    //Lottie JSON
+    api "com.airbnb.android:lottie:3.4.0"
+
+    //Circular ImageView
+    api 'de.hdodenhof:circleimageview:3.1.0'
+
+    //Workmanger
+    api "androidx.work:work-runtime:2.8.1"
+    api 'androidx.work:work-runtime-ktx:2.8.1'
+}

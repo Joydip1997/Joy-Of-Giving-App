@@ -1,0 +1,27 @@
+<resources>
+
+
+    <!--Admob-->
+    <!--    <string name="admob_app_id" translatable="false">-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</string>-->
+
+
+
+
+    <string name="app_name" translatable="false">Recycler Dada</string>
+
+
+    <string name="log_in">Log In</string>
+    <string name="register">Register</string>
+    <string name="web_client_id">949397645222-k9odl8vgdsakelu6arknd38i08b7gcuc.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="facebook_app_id">392962846596055</string>
+    <string name="fb_login_protocol_scheme">fb392962846596055</string>
+    <string name="facebook_client_token">7979219ac5bec09f1410b84243474f13</string>
+
+
+
+
+</resources>

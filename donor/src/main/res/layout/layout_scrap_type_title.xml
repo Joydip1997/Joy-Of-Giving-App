@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12sdp"
+    app:cardElevation="@dimen/_2sdp"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_4sdp">
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:paddingHorizontal="@dimen/_12sdp"
+       android:paddingVertical="@dimen/_8sdp">
+
+       <ImageView
+           android:id="@+id/iv_scrap"
+           android:layout_width="24dp"
+           android:layout_height="24dp"
+           android:src="@drawable/ic_cardboard"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <TextView
+           android:id="@+id/tv_scrap_type"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:fontFamily="@font/font_medium"
+           android:text="Home"
+           android:layout_marginStart="@dimen/_4sdp"
+           android:textColor="@color/color_text_primary"
+           android:textSize="@dimen/_12ssp"
+           app:layout_constraintBottom_toBottomOf="@+id/iv_scrap"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toEndOf="@+id/iv_scrap"
+           app:layout_constraintTop_toTopOf="parent" />
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

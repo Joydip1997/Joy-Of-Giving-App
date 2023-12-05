@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:layout_marginHorizontal="@dimen/_12sdp"
+    app:cardElevation="@dimen/_2sdp"
+    android:layout_gravity="center"
+    android:paddingVertical="@dimen/_8sdp"
+    app:cardBackgroundColor="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/tv_weight_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_semi_bold"
+        android:text="20-100KG"
+        android:gravity="center"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="log_in">로그인</string>
+    <string name="register">등록하다</string>
+
+
+</resources>

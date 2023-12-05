@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_logo"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_go_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go Green! With Your Own Dada Recycler Dada"
+            android:fontFamily="@font/font_bold"
+            android:textColor="@color/color_primary"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_logo"
+            app:layout_constraintStart_toStartOf="@+id/iv_logo"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_secondary"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:paddingVertical="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/font_regular"
+            android:textSize="@dimen/_12ssp"
+            android:text="We are currently operational in Kolkata,Howrah,North 24 PGS"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_go_green" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/appCompatButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:background="@color/color_primary"
+            android:text="BOOk A PICKUP"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_message" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vp_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+
+
+        <TextView
+            android:id="@+id/tv_how_we_want_to_impact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/font_bold"
+            android:paddingVertical="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="What is our vision"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vp_about_us" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/font_medium"
+            android:paddingVertical="@dimen/_8sdp"
+            android:gravity="center"
+            android:text="We are committed to recycling\n100,000 tons of scrap."
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_our_vision" />
+
+        <ImageView
+            android:id="@+id/iv_our_vision"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/banner_vision"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_how_we_want_to_impact" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

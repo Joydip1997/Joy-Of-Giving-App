@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="log_in">登录</string>
+    <string name="register">登记</string>
+
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/hour_expanded"
+        motion:constraintSetStart="@id/start_hour_minute"
+        motion:duration="200">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        motion:constraintSetStart="@+id/start_hour_minute"
+        motion:constraintSetEnd="@+id/min_expanded"
+        motion:duration="200"/>
+
+    <ConstraintSet android:id="@+id/start_hour_minute">
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            android:layout_width="wrap_content"
+            android:alpha="1"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/layout_awake_time" />
+
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            android:layout_width="wrap_content"
+            android:alpha="1"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:id="@+id/layout_sleep_time" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/hour_expanded">
+        <Constraint
+            android:id="@+id/layout_awake_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            motion:layout_constraintStart_toStartOf="@+id/clockSlider"
+            motion:layout_constraintEnd_toEndOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            />
+
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintEnd_toEndOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:alpha="0"
+            android:id="@+id/layout_sleep_time" />
+
+    </ConstraintSet>
+    <ConstraintSet android:id="@+id/min_expanded" >
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            motion:layout_constraintStart_toStartOf="@+id/clockSlider"
+            motion:layout_constraintEnd_toEndOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            android:id="@+id/layout_sleep_time" />
+
+        <Constraint
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/clockSlider"
+            motion:layout_constraintTop_toBottomOf="@+id/clockSlider"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:alpha="0"
+            android:id="@+id/layout_awake_time" />
+    </ConstraintSet>
+
+</MotionScene>

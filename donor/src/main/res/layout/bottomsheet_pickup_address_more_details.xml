@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_down"
+            app:tint="@color/color_text_primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Address Details"
+            android:layout_gravity="center"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/font_medium"/>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/title_set_pickup_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:fontFamily="@font/font_medium"
+        android:text="Set Pickup Address"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <EditText
+        android:id="@+id/et_pickup_full_address"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:hint="ENTER FULL ADDRESS"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/title_set_pickup_address"
+        app:layout_constraintTop_toBottomOf="@+id/title_set_pickup_address" />
+
+
+    <EditText
+        android:id="@+id/et_pickup_address_city"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:hint="ENTER CITY NAME"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pickup_full_address"
+        app:layout_constraintTop_toBottomOf="@+id/et_pickup_full_address" />
+
+
+    <EditText
+        android:id="@+id/et_pickup_address_landmark"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:hint="LANDMARK"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pickup_address_city"
+        app:layout_constraintTop_toBottomOf="@+id/et_pickup_address_city" />
+
+
+    <EditText
+        android:id="@+id/et_pickup_address_pincode"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:hint="1234565"
+        android:maxLength="6"
+        android:inputType="number"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/et_pickup_address_landmark"
+        app:layout_constraintTop_toBottomOf="@+id/et_pickup_address_landmark" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_location_tag"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/_8sdp"-->
+<!--        android:fontFamily="@font/font_regular"-->
+<!--        android:text="TAG AS"-->
+<!--        android:textColor="@color/color_text_primary"-->
+<!--        android:textSize="@dimen/_12ssp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/et_pickup_address_pincode"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/et_pickup_address_pincode" />-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:layout_marginVertical="@dimen/_12sdp"
+        android:background="@color/color_primary"
+        android:text="Save and proceed"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pickup_address_pincode" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

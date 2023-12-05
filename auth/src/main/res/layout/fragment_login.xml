@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/title_generate_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_regular"
+        android:text="Generate OTP"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_enter_otp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:fontFamily="@font/font_regular"
+        android:text="enter your mobile number and start earning from your scrap"
+        android:textAllCaps="true"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_generate_otp" />
+
+
+    <TextView
+        android:id="@+id/title_mobile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:fontFamily="@font/font_regular"
+        android:text="Mobile Number"
+        android:textColor="@color/color_text_primary"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_enter_otp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ti_layout_place_contact_number"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:helperText="+91-1234567890"
+        app:hintAnimationEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_mobile_number"
+        app:prefixText="+91"
+        app:prefixTextColor="@color/color_text_primary"
+        android:layout_marginHorizontal="@dimen/_12sdp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_user_mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:inputType="number"
+            android:maxLength="10"
+            android:text=""
+            android:background="@color/color_light_grey_80"
+            android:textColor="@color/color_text_primary"
+            android:textColorHint="@color/color_text_primary" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/cp_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/color_primary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_get_otp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:alpha="0.3"
+        android:background="@color/color_primary"
+        android:text="GET OTP"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

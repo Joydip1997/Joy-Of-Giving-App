@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_generate_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/font_regular"
+            android:text="Something More About Our Green Warrior"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_enter_otp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/font_regular"
+            android:textAllCaps="true"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_generate_otp"
+            tools:text="Please tell something more about you" />
+
+        <LinearLayout
+            android:id="@+id/ll_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/title_enter_otp"
+            app:layout_constraintStart_toStartOf="@+id/title_enter_otp"
+            app:layout_constraintTop_toBottomOf="@+id/title_enter_otp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_layout_user_first_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="First Name"
+                app:endIconMode="clear_text"
+                android:layout_marginEnd="@dimen/_4sdp"
+                app:helperTextTextColor="@color/color_text_primary"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/color_text_primary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_user_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/color_text_primary"
+                    android:textColorHint="@color/color_text_primary"
+                    android:textSize="@dimen/_10sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ti_layout_user_last_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Last Name"
+                app:endIconMode="clear_text"
+                android:layout_marginStart="@dimen/_4sdp"
+                app:helperTextTextColor="@color/color_text_primary"
+                app:hintAnimationEnabled="false"
+                app:hintTextColor="@color/color_text_primary"
+                app:layout_constraintEnd_toEndOf="@+id/title_enter_otp"
+                app:layout_constraintStart_toStartOf="@+id/title_enter_otp"
+                app:layout_constraintTop_toBottomOf="@+id/title_enter_otp">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_user_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textColor="@color/color_text_primary"
+                    android:textColorHint="@color/color_text_primary"
+                    android:textSize="@dimen/_10sdp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_layout_user_mobile_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/color_text_primary"
+            app:hintAnimationEnabled="false"
+            android:enabled="false"
+            app:hintTextColor="@color/color_text_primary"
+            app:layout_constraintEnd_toEndOf="@+id/ll_user_name"
+            app:layout_constraintStart_toStartOf="@+id/ll_user_name"
+            app:layout_constraintTop_toBottomOf="@+id/ll_user_name">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="@color/color_primary"
+                android:textColorHint="@color/color_primary"
+                android:textSize="@dimen/_10sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/ti_layout_user_email_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:hint="Your Email Address"
+            app:endIconMode="clear_text"
+            app:helperTextTextColor="@color/color_text_primary"
+            app:hintAnimationEnabled="false"
+            app:hintTextColor="@color/color_text_primary"
+            app:layout_constraintEnd_toEndOf="@+id/ti_layout_user_mobile_layout"
+            app:layout_constraintStart_toStartOf="@+id/ti_layout_user_mobile_layout"
+            app:layout_constraintTop_toBottomOf="@+id/ti_layout_user_mobile_layout">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_user_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textColor="@color/color_primary"
+                android:textColorHint="@color/color_primary"
+                android:textSize="@dimen/_10sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <ProgressBar
+            android:id="@+id/cp_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/color_primary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_create_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/color_primary"
+            android:text="Let Join The Green Movement"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/ll_account_created_animation"
+        layout="@layout/layout_account_creation_done"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
